@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/clubItemLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_background"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="#2C2C2C"
+            android:gravity="center"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/clubItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Club Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/clubItemCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City Name"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/clubItemDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Club Description"
+                android:textSize="11sp"
+                android:textColor="#BFBFBF"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/clubItemCountry"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_launcher_background"/>
+
+                <ImageView
+                    android:id="@+id/clubItemLeatherBall"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/clubItemTapeBall"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

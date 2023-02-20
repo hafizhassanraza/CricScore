@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cricketapp.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/myTeamsFragment"
+        android:name="com.example.cricketapp.fragments.MyTeamsFragment"
+        android:label="My Teams"
+        tools:layout="@layout/fragment_my_teams" >
+        <action
+            android:id="@+id/action_myTeamsFragment_to_teamDetailsFragment"
+            app:destination="@id/teamDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.cricketapp.fragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/newsFeedFragment"
+        android:name="com.example.cricketapp.fragments.NewsFeedFragment"
+        android:label="News Feed"
+        tools:layout="@layout/fragment_news_feed" >
+        <action
+            android:id="@+id/action_newsFeedFragment_to_readNewsFragment"
+            app:destination="@id/readNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.cricketapp.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/myMatchesFragment"
+        android:name="com.example.cricketapp.fragments.MyMatchesFragment"
+        android:label="fragment_my_matches"
+        tools:layout="@layout/fragment_my_matches" >
+        <action
+            android:id="@+id/action_myMatchesFragment_to_createMatchFragment"
+            app:destination="@id/createMatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamDetailsFragment"
+        android:name="com.example.cricketapp.fragments.TeamDetailsFragment"
+        android:label="fragment_team_details"
+        tools:layout="@layout/fragment_team_details" >
+        <argument
+            android:name="teamName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/readNewsFragment"
+        android:name="com.example.cricketapp.fragments.ReadNewsFragment"
+        android:label="fragment_read_news"
+        tools:layout="@layout/fragment_read_news" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/myTournamentsFragment"
+        android:name="com.example.cricketapp.fragments.MyTournamentsFragment"
+        android:label="fragment_my_tournaments"
+        tools:layout="@layout/fragment_my_tournaments" >
+        <action
+            android:id="@+id/action_myTournamentsFragment_to_createTournamentFragment"
+            app:destination="@id/createTournamentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clubFragment"
+        android:name="com.example.cricketapp.fragments.ClubFragment"
+        android:label="fragment_club"
+        tools:layout="@layout/fragment_club" >
+        <action
+            android:id="@+id/action_clubFragment_to_createClubFragment"
+            app:destination="@id/createClubFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTournamentFragment"
+        android:name="com.example.cricketapp.fragments.CreateTournamentFragment"
+        android:label="fragment_create_tournament"
+        tools:layout="@layout/fragment_create_tournament" />
+    <fragment
+        android:id="@+id/createClubFragment"
+        android:name="com.example.cricketapp.fragments.CreateClubFragment"
+        android:label="fragment_create_club"
+        tools:layout="@layout/fragment_create_club" />
+    <fragment
+        android:id="@+id/createMatchFragment"
+        android:name="com.example.cricketapp.fragments.CreateMatchFragment"
+        android:label="fragment_create_match"
+        tools:layout="@layout/fragment_create_match" >
+        <action
+            android:id="@+id/action_createMatchFragment_to_scoringFragment"
+            app:destination="@id/scoringFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoringFragment"
+        android:name="com.example.cricketapp.fragments.ScoringFragment"
+        android:label="fragment_scoring"
+        tools:layout="@layout/fragment_scoring" >
+        <action
+            android:id="@+id/action_scoringFragment_to_scoringSelectBatsman"
+            app:destination="@id/scoringSelectBatsman" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoringSelectBatsman"
+        android:name="com.example.cricketapp.fragments.ScoringSelectBatsman"
+        android:label="fragment_scoring_select_batsman"
+        tools:layout="@layout/fragment_scoring_select_batsman" />
+</navigation>

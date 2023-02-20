@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ScoringFragment"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/scoringTVTeamA"
+        app:layout_constraintTop_toBottomOf="@+id/scoringTVTeamA">
+
+        <TextView
+            android:id="@+id/scoringTVTeamA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scoringTVInnings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1st Innings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVTeamA" />
+
+        <TextView
+            android:id="@+id/scoringTVScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="0-0"
+            android:textColor="@color/purple_700"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVInnings" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVScore" />
+
+        <TextView
+            android:id="@+id/scoringTVExtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Extras - 100"
+            app:layout_constraintEnd_toStartOf="@+id/scoringTVOvers"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            android:maxLength="15"/>
+
+        <TextView
+            android:id="@+id/scoringTVOvers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Overs - 500/100"
+            app:layout_constraintEnd_toStartOf="@+id/scoringTVCRR"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scoringTVExtras"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/scoringTVCRR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="CRR - 1000.99"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scoringTVOvers"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            android:maxLength="10"/>
+
+        <TextView
+            android:id="@+id/scoringTVPartnership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Partnership - 500(399)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVOvers" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Batsman"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVPartnership" />
+
+        <TextView
+            android:id="@+id/scoringTVRuns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="32dp"
+            android:text="R"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/scoringTVBalls"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVPartnership" />
+
+        <TextView
+            android:id="@+id/scoringTVBalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="B"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/scoringTV4s"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scoringTVRuns"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVPartnership" />
+
+        <TextView
+            android:id="@+id/scoringTV4s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="4s"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/scoringTV6s"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scoringTVBalls"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVPartnership" />
+
+        <TextView
+            android:id="@+id/scoringTV6s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="6s"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/scoringTVSR"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scoringTV4s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVPartnership" />
+
+        <TextView
+            android:id="@+id/scoringTVSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="SR"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scoringTV6s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVPartnership" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Ahmed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsman" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanOneRuns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="24"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVRuns"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVRuns"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVRuns" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanOneBalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="44"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBalls"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBalls"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBalls" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanOne4s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="5"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTV4s"
+            app:layout_constraintStart_toStartOf="@+id/scoringTV4s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTV4s" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanOne6s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="2"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTV6s"
+            app:layout_constraintStart_toStartOf="@+id/scoringTV6s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTV6s" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanOneSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="1020233"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVSR"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVSR"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVSR"
+            android:maxLength="6"/>
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Hassan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanOne" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanTwoRuns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="399"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanOneRuns"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanOneRuns"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanOneRuns" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanTwoBalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="23"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanOneBalls"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanOneBalls"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanOneBalls" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanTwo4s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="122"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanOne4s"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanOne4s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanOne4s" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanTwo6s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="443"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanOne6s"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanOne6s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanOne6s" />
+
+        <TextView
+            android:id="@+id/scoringTVBatsmanTwoSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="23"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanOneSR"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanOneSR"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanOneSR" />
+
+        <TextView
+            android:id="@+id/scoringTVBowler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Bowler"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanTwo" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="O"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanTwoRuns"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanTwoRuns"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanTwoRuns" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerMaiden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="M"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanTwoBalls"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanTwoBalls"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanTwoBalls" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerRuns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="R"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanTwo4s"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanTwo4s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanTwo4s" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerWickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="W"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanTwo6s"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanTwo6s"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanTwo6s" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerEco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Eco"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBatsmanTwoSR"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBatsmanTwoSR"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBatsmanTwoSR" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Umair"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowler" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerOneOvers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="9.22332"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBowlerOver"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBowlerOver"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowlerOver"
+            android:maxLength="5"/>
+
+        <TextView
+            android:id="@+id/scoringTVBowlerOneMaiden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="23"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBowlerMaiden"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBowlerMaiden"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowlerMaiden" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerOneRuns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="3390"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBowlerRuns"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBowlerRuns"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowlerRuns" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerOneWickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="2333"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBowlerWickets"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBowlerWickets"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowlerWickets" />
+
+        <TextView
+            android:id="@+id/scoringTVBowlerOneEco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="24.39948"
+            app:layout_constraintEnd_toEndOf="@+id/scoringTVBowlerEco"
+            app:layout_constraintStart_toStartOf="@+id/scoringTVBowlerEco"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowlerEco"
+            android:maxLength="5"/>
+
+<!--        <androidx.fragment.app.FragmentContainerView-->
+<!--            android:id="@+id/fragmentContainerView"-->
+<!--            android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            app:defaultNavHost="true"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowlerOneMaiden"-->
+<!--            app:navGraph="@navigation/score_nav" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoringTVBowlerOneMaiden">
+
+            <TextView
+                android:id="@+id/scoreHome1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="1"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/scoreHome2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="2"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/scoreHome3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="3"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/scoreHome4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="4"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/scoreHome6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="6"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
